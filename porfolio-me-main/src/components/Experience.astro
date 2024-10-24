@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Practicante Arquitectura de Software",
+    company: "EFICACIA/EXTRAS SAS",
+    description:
+      "Mi funcion es desarrollar un pluggin para Outlook New 2024. Desarrollando tanto el Backend como el Fronted.",
+    link: "https://github.com/Nicode1010/Pluggin-Outlook-TIME-CAPTURE.git",
+  },
+  {
+    date: "2022 - 2024",
+    title: "Software Developer For Fun",
+    company: "Nicolas Rios SAS",
+    description:
+      "Desde que comencé mi carrera, me apasioné por el Desarrollo de Software. Esta pasión me llevó a dedicarme a la creación de proyectos que me han permitido adquirir conocimientos invaluables, actualizar mis conocimientos y seguir mejorando continuamente en el campo. Todo esto de manera autodidacta.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
