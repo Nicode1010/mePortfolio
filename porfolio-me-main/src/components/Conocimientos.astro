@@ -1,27 +1,30 @@
 ---
-
+// No se necesitan importaciones adicionales en este archivo
 const lenguajes = [
-  { nombre: "JavaScript", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/javascript.svg" },
-  { nombre: "TypeScript", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/typescript.svg" },
-  { nombre: "Python", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" },
-  { nombre: "HTML5", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/html5.svg" },
-  { nombre: "CSS3", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/css3.svg" },
+  { nombre: "JavaScript", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { nombre: "TypeScript", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { nombre: "Python", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { nombre: "Java", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
 ];
 
 const tecnologias = [
-  { nombre: "Node.js", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" },
-  { nombre: "AWS", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" },
-  { nombre: "SQL Server", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftsqlserver.svg" },
-  { nombre: "Docker", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" },
-  { nombre: "Git", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" },
+  { nombre: "Node.js", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { nombre: "Docker", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { nombre: "Git", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { nombre: "AWS", icono: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" }
+];
+
+const basesDatosYCloud = [
+  { nombre: "MongoDB", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { nombre: "SQL Server", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" },
+  { nombre: "AWS", icono: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" }
 ];
 
 const frameworks = [
-  { nombre: "React", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" },
-  { nombre: "Next.js", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nextdotjs.svg" },
-  { nombre: "Django", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/django.svg" },
-  { nombre: "Tailwind CSS", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tailwindcss.svg" },
-  { nombre: "Express.js", icono: "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/express.svg" },
+  { nombre: "React", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { nombre: "Django", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+  { nombre: "Express", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  { nombre: "Spring Boot", icono: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
 ];
 ---
 
@@ -31,7 +34,7 @@ const frameworks = [
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       {lenguajes.map((lenguaje) => (
         <div class="flex flex-col items-center space-y-2 text-center">
-          <img src={lenguaje.icono} alt={lenguaje.nombre} class="h-12 w-12 icon-color" />
+          <img src={lenguaje.icono} alt={lenguaje.nombre} class="h-12 w-12" />
           <span class="text-gray-700 dark:text-gray-300">{lenguaje.nombre}</span>
         </div>
       ))}
@@ -43,8 +46,20 @@ const frameworks = [
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       {tecnologias.map((tecnologia) => (
         <div class="flex flex-col items-center space-y-2 text-center">
-          <img src={tecnologia.icono} alt={tecnologia.nombre} class="h-12 w-12 icon-color" />
+          <img src={tecnologia.icono} alt={tecnologia.nombre} class="h-12 w-12" />
           <span class="text-gray-700 dark:text-gray-300">{tecnologia.nombre}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Bases de Datos y Cloud</h2>
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+      {basesDatosYCloud.map((bd) => (
+        <div class="flex flex-col items-center space-y-2 text-center">
+          <img src={bd.icono} alt={bd.nombre} class="h-12 w-12" />
+          <span class="text-gray-700 dark:text-gray-300">{bd.nombre}</span>
         </div>
       ))}
     </div>
@@ -55,23 +70,10 @@ const frameworks = [
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       {frameworks.map((framework) => (
         <div class="flex flex-col items-center space-y-2 text-center">
-          <img src={framework.icono} alt={framework.nombre} class="h-12 w-12 icon-color" />
+          <img src={framework.icono} alt={framework.nombre} class="h-12 w-12" />
           <span class="text-gray-700 dark:text-gray-300">{framework.nombre}</span>
         </div>
       ))}
     </div>
   </div>
 </section>
-
-<style>
-  /* Aplica los estilos para los íconos en modo claro y oscuro */
-  .icon-color {
-    filter: invert(0); /* Default light mode (black icons) */
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .icon-color {
-      filter: invert(1) hue-rotate(180deg); /* Dark mode (white icons) */
-    }
-  }
-</style>

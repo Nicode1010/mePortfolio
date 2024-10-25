@@ -1,9 +1,12 @@
 ---
 import GitHub from "./icons/GitHub.astro"
+import HTML5 from "./icons/HTML5.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import NodeJs from "./icons/NodeJs.astro"
+import SQLServer from "./icons/SQLServer.astro"
 
 const TAGS = {
   NEXT: {
@@ -15,6 +18,21 @@ const TAGS = {
     name: "AWS",
     class: "bg-gray-100 text-black",
     icon: Tailwind,
+  },
+  NODEJS: {
+    name: "NodeJs",
+    class: "bg-gray-100 text-black",
+    icon: NodeJs,
+  },
+  HTML5: {
+    name: "HTML5",
+    class: "bg-gray-100 text-black",
+    icon: HTML5,
+  },
+  SQLSERVER: {
+    name: "SQLServer",
+    class: "bg-black text-white",
+    icon: SQLServer,
   },
 }
 const PROJECTS = [
@@ -30,10 +48,11 @@ const PROJECTS = [
   {
     title: "Time Catcher: Optimización de Citas en Outlook 2024",
     description:
-      "Time Catcher es un complemento desarrollado para Outlook 2024 que optimiza la gestión de citas al permitir a los usuarios integrar y organizar información relevante de manera eficiente. Este plugin utiliza JavaScript y la API de JavaScript de Office para interactuar con el cliente de Outlook, facilitando la captura y el manejo de datos de citas.",
+      "Time Capture es un pluggin desarrollado para Outlook 2024 que optimiza la gestión de citas al permitir a los usuarios integrar y organizar información relevante de manera eficiente. Este plugin utiliza JavaScript y la API de JavaScript de Office para interactuar con el cliente de Outlook, facilitando la captura y el manejo de datos de citas.",
     link: "https://TimeCapture.png",
+    github: "https://github.com/Nicode1010/Pluggin-Outlook-TIME-CAPTURE.git",
     image: "/projects/TimeCapture.png",
-    tags: [TAGS.NEXT],
+    tags: [TAGS.NEXT, TAGS.NODEJS, TAGS.HTML5, TAGS.SQLSERVER],
   },
 ]
 ---
@@ -75,12 +94,7 @@ const PROJECTS = [
               
             </LinkButton>
           )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
+          
         </footer>
     </div>
   </div>
